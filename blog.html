@@ -119,11 +119,12 @@
       </button>
       <div class="collapse navbar-collapse" id="navMain">
         <ul class="navbar-nav ms-auto me-lg-3 mb-2 mb-lg-0 align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav_home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav_about">Tentang</a></li>
+           <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav_about">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="offers.html" data-i18n="nav_offers">Penawaran</a></li>
           <li class="nav-item"><a class="nav-link" href="rooms.html" data-i18n="nav_rooms">Kamar</a></li>
-          <li class="nav-item"><a class="nav-link active" href="blog.html" data-i18n="nav_blog">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav_contact">Kontak</a></li>
+          <li class="nav-item"><a class="nav-link" href="fasilitas.html" data-i18n="nav_facilities">Fasilitas</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html" data-i18n="nav_location">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html" data-i18n="nav_reviews">Kontak</a></li>
         </ul>
         <div class="top-actions">
           <select class="lang-select" id="langSelect">
@@ -331,8 +332,8 @@
 
     // --- LANGUAGE & THEME (Standard) ---
     const i18n = {
-      id: { nav_home: "Beranda", nav_about: "Tentang", nav_rooms: "Kamar", nav_facilities: "Fasilitas", nav_location: "Lokasi", nav_blog: "Blog", nav_contact: "Kontak", nav_book: "Pesan Sekarang", hero_title: "Jurnal Kami", hero_sub: "Inspirasi, berita, dan cerita menarik.", search_ph: "Cari artikel...", btn_read: "Baca Selengkapnya", art1_title: "Tips Staycation Produktif", art1_desc: "Cara menyeimbangkan relaksasi dan pekerjaan.", art2_title: "Menjelajah Kuliner Karawang", art2_desc: "Rekomendasi tempat makan otentik.", art3_title: "Kenapa Fasilitas Hotel Penting?", art3_desc: "Gym dan kolam renang faktor utama.", art4_title: "Tren Pernikahan Intimate", art4_desc: "Konsep pernikahan kecil namun mewah.", art5_title: "Liburan Keluarga di Akhir Pekan", art5_desc: "Aktivitas seru untuk anak-anak.", art6_title: "Manfaat Spa Setelah Bekerja", art6_desc: "Kembalikan energi dan fokus." },
-      en: { nav_home: "Home", nav_about: "About", nav_rooms: "Rooms", nav_facilities: "Facilities", nav_location: "Location", nav_blog: "Blog", nav_contact: "Contact", nav_book: "Book Now", hero_title: "Our Journal", hero_sub: "Inspiration, news, and interesting stories.", search_ph: "Search article...", btn_read: "Read More", art1_title: "Productive Staycation Tips", art1_desc: "How to balance relaxation and work.", art2_title: "Exploring Karawang Culinary", art2_desc: "Authentic dining recommendations.", art3_title: "Why Hotel Facilities Matter?", art3_desc: "Why gyms and pools are key factors.", art4_title: "Intimate Wedding Trends", art4_desc: "Small yet luxurious wedding concepts.", art5_title: "Family Weekend Getaway", art5_desc: "Fun activities for kids.", art6_title: "Spa Benefits After Work", art6_desc: "Restore your energy and focus." }
+      id: { nav_home: "Beranda", nav_about: "Tentang", nav_rooms: "Kamar", nav_facilities: "Fasilitas", nav_location: "Blog", nav_blog: "Blog", nav_contact: "Kontak", nav_book: "Pesan Sekarang", hero_title: "Jurnal Kami", hero_sub: "Inspirasi, berita, dan cerita menarik.", search_ph: "Cari artikel...", btn_read: "Baca Selengkapnya", art1_title: "Tips Staycation Produktif", art1_desc: "Cara menyeimbangkan relaksasi dan pekerjaan.", art2_title: "Menjelajah Kuliner Karawang", art2_desc: "Rekomendasi tempat makan otentik.", art3_title: "Kenapa Fasilitas Hotel Penting?", art3_desc: "Gym dan kolam renang faktor utama.", art4_title: "Tren Pernikahan Intimate", art4_desc: "Konsep pernikahan kecil namun mewah.", art5_title: "Liburan Keluarga di Akhir Pekan", art5_desc: "Aktivitas seru untuk anak-anak.", art6_title: "Manfaat Spa Setelah Bekerja", art6_desc: "Kembalikan energi dan fokus." },
+      en: { nav_home: "Home", nav_about: "About", nav_rooms: "Rooms", nav_facilities: "Facilities", nav_location: "Blog", nav_blog: "Blog", nav_contact: "Contact", nav_book: "Book Now", hero_title: "Our Journal", hero_sub: "Inspiration, news, and interesting stories.", search_ph: "Search article...", btn_read: "Read More", art1_title: "Productive Staycation Tips", art1_desc: "How to balance relaxation and work.", art2_title: "Exploring Karawang Culinary", art2_desc: "Authentic dining recommendations.", art3_title: "Why Hotel Facilities Matter?", art3_desc: "Why gyms and pools are key factors.", art4_title: "Intimate Wedding Trends", art4_desc: "Small yet luxurious wedding concepts.", art5_title: "Family Weekend Getaway", art5_desc: "Fun activities for kids.", art6_title: "Spa Benefits After Work", art6_desc: "Restore your energy and focus." }
     };
 
     let currentLang = localStorage.getItem('lang') || 'id';
