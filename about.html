@@ -1,0 +1,1444 @@
+<!doctype html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>About Us | Star KIIC Hotel & Resort</title>
+  <meta name="description" content="Tentang Star KIIC Hotel & Resort: nilai layanan, signature experience, dan fasilitas premium untuk bisnis & liburan di kawasan KIIC Karawang." />
+  <meta name="keywords" content="about star kiic, hotel kiic karawang, hotel karawang, resort karawang, meeting room karawang" />
+  <meta name="author" content="Star KIIC" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://example.com/about.html" />
+
+  <meta property="og:title" content="About Us | Star KIIC Hotel & Resort" />
+  <meta property="og:description" content="Nilai layanan, signature experience, dan fasilitas premium untuk bisnis & liburan di KIIC Karawang." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/about.html" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1600&auto=format&fit=crop" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+  <link rel="dns-prefetch" href="https://images.unsplash.com" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <style>
+    /* ========= BASE THEME ========= */
+    :root{
+      --bg: #f6f7f5;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --muted: #55616a;
+
+      --brand: #0b3a2e;
+      --brand-2: #c9a24a;
+      --brand-3: #0f5a46;
+
+      --line: rgba(15, 23, 42, .12);
+      --shadow: 0 14px 30px rgba(2, 6, 23, .10);
+
+      --radius-xl: 14px;
+      --radius-lg: 12px;
+      --radius-md: 10px;
+
+      --focus: 0 0 0 .25rem rgba(201,162,74,.22);
+
+      --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans";
+      --font-head: "Playfair Display", ui-serif, Georgia, "Times New Roman", serif;
+    }
+
+    html[data-theme="dark"]{
+      --bg:#070c0b;
+      --surface:#0f1413;
+      --text:#e8f0ee;
+      --muted:#a9b7b3;
+
+      --brand:#e8f0ee;
+      --brand-2:#c9a24a;
+      --brand-3:#77d2b2;
+
+      --line: rgba(232,240,238,.14);
+      --shadow: 0 16px 40px rgba(0,0,0,.40);
+    }
+
+    body{
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      letter-spacing: .15px;
+      overflow-x:hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    h1,h2,h3,h4,.section-title{ font-family: var(--font-head); }
+    a{ color: inherit; }
+    .text-muted{ color: var(--muted)!important; }
+    .border-soft{ border: 1px solid var(--line); }
+    .shadow-soft{ box-shadow: var(--shadow); }
+    .rounded-xxl{ border-radius: var(--radius-xl); }
+    .rounded-xl{ border-radius: var(--radius-lg); }
+    .rounded-lg{ border-radius: var(--radius-md); }
+
+    /* ===== Navbar ===== */
+    .nav-glass{
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    
+    /* --- LOGO SWITCHER CSS (ADDED) --- */
+    .brand-logo{
+      height: 34px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 18px rgba(0,0,0,.12));
+    }
+    .logo-on-light { display: block; }
+    .logo-on-dark { display: none; }
+
+    html[data-theme="dark"] .logo-on-light { display: none; }
+    html[data-theme="dark"] .logo-on-dark { display: block; }
+    /* ------------------------------ */
+
+    .nav-link{
+      color: var(--muted) !important;
+      font-weight: 800;
+      font-size: .93rem;
+      padding: .6rem .75rem !important;
+      border-radius: 0;
+      transition: .18s ease;
+      position: relative;
+      letter-spacing: .3px;
+      font-family: var(--font-body);
+    }
+    .nav-link:hover{ color: var(--text) !important; background: transparent; }
+    .nav-link::after{
+      content:"";
+      position:absolute;
+      left:.75rem; right:.75rem; bottom:.35rem;
+      height:2px;
+      background: transparent;
+      transition: .18s ease;
+    }
+    .nav-link:hover::after{ background: color-mix(in srgb, var(--brand-2) 88%, transparent); }
+
+    .top-actions{ display:flex; gap: 10px; align-items:center; }
+    .lang-select{
+      border-radius: 10px;
+      padding: .45rem .75rem;
+      border: 1px solid var(--line);
+      background: color-mix(in srgb, var(--surface) 94%, transparent);
+      color: var(--text);
+      font-weight: 900;
+      font-size: .9rem;
+      font-family: var(--font-body);
+    }
+    .theme-switch{
+      display:flex; align-items:center; gap: 10px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: color-mix(in srgb, var(--surface) 94%, transparent);
+    }
+    .switch{ position: relative; width: 52px; height: 28px; }
+    .switch input{ display:none; }
+    .slider{
+      position:absolute; inset:0;
+      background: color-mix(in srgb, var(--surface) 80%, transparent);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      cursor:pointer;
+      transition: .22s ease;
+    }
+    .slider:before{
+      content:"";
+      position:absolute;
+      height: 22px; width: 22px;
+      left: 3px; top: 50%;
+      transform: translateY(-50%);
+      border-radius: 8px;
+      background: linear-gradient(145deg, var(--brand-2), color-mix(in srgb, var(--brand-2) 62%, #fff));
+      box-shadow: 0 10px 18px rgba(201,162,74,.22);
+      transition: .22s ease;
+    }
+    .switch input:checked + .slider:before{ transform: translate(24px, -50%); }
+
+    /* ===== Buttons ===== */
+    .btn-gold{
+      background: linear-gradient(145deg, var(--brand-2), color-mix(in srgb, var(--brand-2) 62%, #fff));
+      border: 1px solid color-mix(in srgb, var(--brand-2) 55%, #0000);
+      color:#111;
+      font-weight: 900;
+      border-radius: 10px;
+      padding: .86rem 1rem;
+      box-shadow: 0 14px 28px rgba(201,162,74,.22);
+      transition: .18s ease;
+      letter-spacing: .2px;
+      font-family: var(--font-body);
+    }
+    .btn-gold:hover{ transform: translateY(-1px); filter: brightness(.99); }
+
+    /* ========= ABOUT PAGE STYLES ========= */
+    .page-hero{
+      position: relative;
+      padding-top: 110px; /* offset navbar fixed */
+      padding-bottom: 26px;
+      overflow:hidden;
+    }
+    .about-hero-card{
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow:hidden;
+      box-shadow: var(--shadow);
+      background: color-mix(in srgb, var(--surface) 94%, transparent);
+      position: relative;
+      min-height: 420px;
+    }
+    .about-hero-bg{
+      position:absolute; inset:0;
+      background:
+        radial-gradient(60% 90% at 12% 20%, rgba(201,162,74,.28), transparent 62%),
+        radial-gradient(70% 80% at 90% 10%, rgba(15,90,70,.22), transparent 55%),
+        linear-gradient(180deg, rgba(7,12,11,.10), rgba(7,12,11,.22)),
+        url("img/about1.avif");
+      background-size: cover;
+      background-position: center;
+      filter: saturate(1.02) contrast(1.06);
+    }
+    html[data-theme="dark"] .about-hero-bg{
+      filter: saturate(1.0) contrast(1.05) brightness(.92);
+    }
+    .about-hero-glass{
+      position:absolute; inset:0;
+      background:
+        linear-gradient(90deg,
+          rgba(255,255,255,.90) 0%,
+          rgba(255,255,255,.72) 40%,
+          rgba(255,255,255,.12) 70%,
+          rgba(255,255,255,.00) 100%);
+    }
+    html[data-theme="dark"] .about-hero-glass{
+      background:
+        linear-gradient(90deg,
+          rgba(15,20,19,.92) 0%,
+          rgba(15,20,19,.78) 44%,
+          rgba(15,20,19,.20) 72%,
+          rgba(15,20,19,.00) 100%);
+    }
+
+    .crumbs{
+      display:flex;
+      align-items:center;
+      gap:.55rem;
+      flex-wrap:wrap;
+      font-weight: 800;
+      color: var(--muted);
+      font-size: .92rem;
+      letter-spacing: .2px;
+    }
+    .crumbs a{ text-decoration:none; }
+    .crumbs a:hover{ color: var(--text); }
+
+    .hero-kicker{
+      display:inline-flex;
+      gap:.55rem;
+      align-items:center;
+      padding: .55rem .85rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: color-mix(in srgb, var(--surface) 88%, transparent);
+      font-weight: 900;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      font-size: .78rem;
+    }
+    .about-hero-title{
+      font-weight: 900;
+      letter-spacing: -0.6px;
+      line-height: 1.04;
+    }
+    .about-hero-sub{
+      color: var(--muted);
+      max-width: 62ch;
+      font-weight: 500;
+    }
+
+    .hero-mini-grid{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .mini-card{
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: color-mix(in srgb, var(--surface) 92%, transparent);
+      box-shadow: 0 12px 24px rgba(2,6,23,.08);
+      overflow:hidden;
+      min-height: 140px;
+      position: relative;
+    }
+    .mini-card img{ width:100%; height:100%; object-fit: cover; filter: saturate(1.05); }
+    .mini-cap{
+      position:absolute;
+      left: 12px; right: 12px; bottom: 12px;
+      background: rgba(7,12,11,.62);
+      border: 1px solid rgba(255,255,255,.14);
+      color: rgba(255,255,255,.92);
+      border-radius: 12px;
+      padding: 10px 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .55px;
+      font-size: .78rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .section{ padding: 70px 0; }
+    .section-title{
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+    .section-lead{ color: var(--muted); max-width: 78ch; font-weight: 500; }
+
+    .divider{ height:1px; background: var(--line); margin: 18px 0; }
+
+    .value-card{
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: color-mix(in srgb, var(--surface) 94%, transparent);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      height:100%;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .value-card:hover{ transform: translateY(-2px); box-shadow: 0 18px 44px rgba(2,6,23,.14); }
+    .value-thumb{
+      aspect-ratio: 4/3;
+      overflow:hidden;
+      background:#111;
+      position: relative;
+    }
+    .value-thumb img{ width:100%; height:100%; object-fit: cover; transition: transform .6s ease; }
+    .value-card:hover .value-thumb img{ transform: scale(1.06); }
+
+    .value-badge{
+      position:absolute;
+      top: 14px; left: 14px;
+      background: rgba(7,12,11,.62);
+      border: 1px solid rgba(255,255,255,.14);
+      color: rgba(255,255,255,.92);
+      padding: .36rem .6rem;
+      border-radius: 12px;
+      font-weight: 900;
+      font-size: .76rem;
+      backdrop-filter: blur(10px);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+
+    .icon-disc{
+      width: 46px; height: 46px;
+      border-radius: 12px;
+      display:grid; place-items:center;
+      background: linear-gradient(145deg,
+          color-mix(in srgb, var(--brand) 12%, var(--surface)),
+          color-mix(in srgb, var(--brand-2) 10%, var(--surface))
+        );
+      border: 1px solid var(--line);
+      color: var(--brand-3);
+      flex: 0 0 auto;
+    }
+
+    .signature-grid{
+      display:grid;
+      grid-template-columns: 1.1fr 1fr 1fr;
+      gap: 14px;
+    }
+    .sig{
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: color-mix(in srgb, var(--surface) 94%, transparent);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      min-height: 290px;
+      position: relative;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .sig:hover{ transform: translateY(-2px); box-shadow: 0 18px 44px rgba(2,6,23,.14); }
+    .sig img{ width:100%; height:100%; object-fit: cover; filter: saturate(1.04); transition: transform .6s ease; }
+    .sig:hover img{ transform: scale(1.06); }
+    .sig-cap{
+      position:absolute; inset:auto 16px 16px 16px;
+      border-radius: 14px;
+      padding: 12px 12px;
+      background: rgba(7,12,11,.62);
+      border: 1px solid rgba(255,255,255,.14);
+      backdrop-filter: blur(10px);
+      color: rgba(255,255,255,.92);
+    }
+    .sig-cap .t{
+      font-weight: 950;
+      letter-spacing: .35px;
+      text-transform: uppercase;
+      font-size: .88rem;
+    }
+    .sig-cap .s{
+      font-size: .92rem;
+      margin-top: 2px;
+      color: rgba(255,255,255,.84);
+      font-weight: 500;
+    }
+
+    /* Location + Nearby list style */
+    .loc-panel{
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: color-mix(in srgb, var(--surface) 94%, transparent);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .loc-map{ background: #0b1412; min-height: 330px; }
+    .loc-map iframe{ width:100%; height:100%; border:0; filter: saturate(1.02) contrast(1.02); }
+
+    .near-item{
+      border: 1px solid var(--line);
+      background: color-mix(in srgb, var(--surface) 92%, transparent);
+      border-radius: 14px;
+      padding: 12px 12px;
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .near-left{ display:flex; gap: 10px; align-items:center; }
+    .near-ico{
+      width: 40px; height: 40px;
+      border-radius: 12px;
+      display:grid; place-items:center;
+      border: 1px solid var(--line);
+      background: linear-gradient(145deg,
+        color-mix(in srgb, var(--brand) 10%, var(--surface)),
+        color-mix(in srgb, var(--brand-2) 12%, var(--surface))
+      );
+      color: var(--brand-3);
+    }
+    .near-badge{
+      padding: .3rem .55rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: color-mix(in srgb, var(--surface) 92%, transparent);
+      font-weight: 900;
+      font-size: .78rem;
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    /* Reviews (minimal, premium) */
+    .review-controls{
+      display:flex;
+      gap: 10px;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .review-controls .carousel-btn{
+      border: 1px solid var(--line);
+      background: color-mix(in srgb, var(--surface) 92%, transparent);
+      color: var(--text);
+      width: 46px; height: 46px;
+      border-radius: 999px;
+      display:grid; place-items:center;
+      box-shadow: var(--shadow);
+      transition: transform .18s ease;
+    }
+    .review-controls .carousel-btn:hover{ transform: translateY(-1px); }
+
+    .review-card{
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: color-mix(in srgb, var(--surface) 94%, transparent);
+      box-shadow: var(--shadow);
+      padding: 18px 18px;
+      height: 100%;
+    }
+    .stars{ color: var(--brand-2); letter-spacing: 1px; font-size: 1rem; }
+    .avatar{
+      width: 44px; height: 44px;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 2px solid color-mix(in srgb, var(--brand-2) 42%, transparent);
+      box-shadow: 0 10px 20px rgba(2,6,23,.10);
+    }
+    #reviewCarousel .carousel-control-prev,
+    #reviewCarousel .carousel-control-next{
+      display:none !important;
+    }
+
+    /* CTA banner */
+    .cta-ivory{
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(60% 100% at 10% 0%, rgba(201,162,74,.22), transparent 58%),
+        radial-gradient(70% 100% at 90% 10%, rgba(15,90,70,.16), transparent 55%),
+        color-mix(in srgb, var(--surface) 95%, transparent);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position: relative;
+    }
+    .cta-ivory::after{
+      content:"";
+      position:absolute; inset:auto -120px -160px auto;
+      width: 360px; height: 360px;
+      background: radial-gradient(circle at 30% 30%, rgba(201,162,74,.22), transparent 62%);
+      transform: rotate(15deg);
+      pointer-events:none;
+    }
+
+    /* Footer */
+    footer{
+      padding: 46px 0;
+      border-top: 1px solid var(--line);
+      background: color-mix(in srgb, var(--brand) 8%, var(--bg));
+    }
+    .footer-mini a{
+      color: var(--muted);
+      text-decoration:none;
+      font-weight: 800;
+      font-family: var(--font-body);
+    }
+    .footer-mini a:hover{ color: var(--text); }
+
+    /* Floating buttons */
+    .float-stack{
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 9999;
+      display:flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-end;
+    }
+    .float-btn{
+      width: 52px; height: 52px;
+      display:grid; place-items:center;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: color-mix(in srgb, var(--surface) 94%, transparent);
+      box-shadow: var(--shadow);
+      text-decoration:none;
+      transition: transform .18s ease, opacity .18s ease, visibility .18s ease;
+    }
+    .float-btn:hover{ transform: translateY(-2px); }
+    .float-btn.wa{
+      background: linear-gradient(145deg, #25D366, color-mix(in srgb, #25D366 62%, #fff));
+      border-color: rgba(0,0,0,.05);
+      color: #063a2c;
+      font-weight: 900;
+    }
+    .float-btn.top{ color: var(--text); }
+    .float-btn.is-hidden{
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(6px);
+    }
+
+    @media (max-width: 991px){
+      .about-hero-card{ min-height: 520px; }
+      .about-hero-glass{
+        background: linear-gradient(180deg,
+          rgba(255,255,255,.92) 0%,
+          rgba(255,255,255,.74) 45%,
+          rgba(255,255,255,.10) 100%);
+      }
+      html[data-theme="dark"] .about-hero-glass{
+        background: linear-gradient(180deg,
+          rgba(15,20,19,.94) 0%,
+          rgba(15,20,19,.82) 50%,
+          rgba(15,20,19,.18) 100%);
+      }
+      .hero-mini-grid{ grid-template-columns: 1fr; }
+      .signature-grid{ grid-template-columns: 1fr; }
+      .sig{ min-height: 240px; }
+    }
+
+    @media (max-width: 576px){
+      .page-hero{ padding-top: 98px; }
+      .about-hero-title{ font-size: 2.05rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      *{ scroll-behavior: auto!important; transition: none!important; }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg nav-glass fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" aria-label="Go to Home">
+        <img class="brand-logo logo-on-light" src="img/logo navbar white.jpeg" alt="Star KIIC Logo (Dark)" />
+        
+        <img class="brand-logo logo-on-dark" src="img/logo navbar black.jpeg" alt="Star KIIC Logo (White)" />
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto me-lg-3 mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html#about" data-i18n="nav_about">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#offers" data-i18n="nav_offers">Penawaran</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#rooms" data-i18n="nav_rooms">Kamar</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#facilities" data-i18n="nav_facilities">Fasilitas</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#location" data-i18n="nav_location">Lokasi</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#reviews" data-i18n="nav_reviews">Ulasan</a></li>
+        </ul>
+
+        <div class="top-actions">
+          <select class="lang-select" id="langSelect" aria-label="Language">
+            <option value="id">ID</option>
+            <option value="en">EN</option>
+          </select>
+
+          <div class="theme-switch" aria-label="Theme Toggle">
+            <i class="bi bi-moon-stars" aria-hidden="true"></i>
+            <label class="switch m-0">
+              <input id="themeToggle" type="checkbox" aria-label="Toggle dark mode">
+              <span class="slider"></span>
+            </label>
+            <i class="bi bi-sun" aria-hidden="true"></i>
+          </div>
+
+          <a class="btn btn-sm btn-gold d-none d-lg-inline-flex" href="index.html#booking" data-i18n="nav_book">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <div class="crumbs mb-3">
+        <a href="index.html">Home</a>
+        <i class="bi bi-chevron-right"></i>
+        <span data-i18n="about_page">About Us</span>
+      </div>
+
+      <div class="about-hero-card">
+        <div class="about-hero-bg" aria-hidden="true"></div>
+        <div class="about-hero-glass" aria-hidden="true"></div>
+
+        <div class="position-relative p-3 p-lg-4">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+              <div class="hero-kicker mb-3">
+                <i class="bi bi-gem"></i>
+                <span data-i18n="hero_kicker">Our Story & Signature Service</span>
+              </div>
+
+              <h1 class="about-hero-title display-5 mb-3" data-i18n="hero_title">
+                Crafted Luxury<br/>for Business & Leisure
+              </h1>
+
+              <p class="about-hero-sub fs-5 mb-4" data-i18n="hero_sub">
+                Di Star KIIC, kami memadukan ketenangan, pelayanan profesional, dan detail elegan untuk menciptakan pengalaman menginap yang berkelas — dari lobby hingga kamar.
+              </p>
+
+              <div class="d-flex flex-wrap gap-2">
+                <a href="#values" class="btn btn-gold">
+                  <span data-i18n="hero_cta1">Explore Values</span> <i class="bi bi-arrow-right-short"></i>
+                </a>
+                <a href="#signatures" class="btn btn-outline-secondary border-soft rounded-xl px-4" style="color:var(--text); background:transparent;">
+                  <span data-i18n="hero_cta2">See Signatures</span>
+                </a>
+              </div>
+
+              <div class="divider my-4"></div>
+
+              <div class="row g-2">
+                <div class="col-12 col-md-4">
+                  <div class="d-flex gap-2 align-items-center">
+                    <div class="icon-disc"><i class="bi bi-shield-check"></i></div>
+                    <div>
+                      <div class="fw-bold" data-i18n="hero_m1">Trusted</div>
+                      <div class="text-muted small" data-i18n="hero_m1s">Professional standards</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4">
+                  <div class="d-flex gap-2 align-items-center">
+                    <div class="icon-disc"><i class="bi bi-tree"></i></div>
+                    <div>
+                      <div class="fw-bold" data-i18n="hero_m2">Calm</div>
+                      <div class="text-muted small" data-i18n="hero_m2s">Green-view ambience</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4">
+                  <div class="d-flex gap-2 align-items-center">
+                    <div class="icon-disc"><i class="bi bi-award"></i></div>
+                    <div>
+                      <div class="fw-bold" data-i18n="hero_m3">Premium</div>
+                      <div class="text-muted small" data-i18n="hero_m3s">Attention to details</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <div class="hero-mini-grid">
+                <div class="mini-card">
+                  <img loading="lazy" src="img/about2 eksplor3.avif" alt="Exterior">
+                  <div class="mini-cap" data-i18n="mini1">Signature Exterior</div>
+                </div>
+                <div class="mini-card">
+                  <img loading="lazy" src="img/about3.webp" alt="Lobby">
+                  <div class="mini-cap" data-i18n="mini2">Luxury Lobby</div>
+                </div>
+              </div>
+              <div class="mini-card mt-3" style="min-height: 170px;">
+                <img loading="lazy" src="img/about1.avif" alt="Pool">
+                <div class="mini-cap" data-i18n="mini3">Resort Pool & Lounge</div>
+              </div>
+            </div>
+          </div>
+        </div></div></div>
+  </header>
+
+  <section class="section pt-4">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-title mb-2" data-i18n="intro_title">About Star KIIC</h2>
+        <p class="section-lead mx-auto mb-0" data-i18n="intro_lead">
+          Kami menghadirkan hospitality yang hangat, rapi, dan profesional — dengan fasilitas lengkap untuk memenuhi kebutuhan tamu selama menginap.
+        </p>
+      </div>
+
+      <div class="row g-3 justify-content-center">
+        <div class="col-12 col-lg-10">
+          <div class="p-3 p-lg-4 rounded-xxl border-soft shadow-soft" style="background:color-mix(in srgb, var(--surface) 96%, transparent);">
+            <div class="row g-3 align-items-center">
+              <div class="col-md-4">
+                <div class="d-flex gap-3 align-items-center">
+                  <div class="icon-disc"><i class="bi bi-clock-history"></i></div>
+                  <div>
+                    <div class="fw-bold" data-i18n="intro_p1">Fast, precise service</div>
+                    <div class="text-muted small" data-i18n="intro_p1s">Check-in smooth & efficient</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="d-flex gap-3 align-items-center">
+                  <div class="icon-disc"><i class="bi bi-wifi"></i></div>
+                  <div>
+                    <div class="fw-bold" data-i18n="intro_p2">Reliable connectivity</div>
+                    <div class="text-muted small" data-i18n="intro_p2s">Wi-Fi for work & entertainment</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="d-flex gap-3 align-items-center">
+                  <div class="icon-disc"><i class="bi bi-cup-hot"></i></div>
+                  <div>
+                    <div class="fw-bold" data-i18n="intro_p3">Curated dining</div>
+                    <div class="text-muted small" data-i18n="intro_p3s">Breakfast & comfort menu</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="values" class="section pt-0">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-title" data-i18n="val_title">Our Value & Services</h2>
+        <p class="section-lead mx-auto" data-i18n="val_lead">
+          Layanan yang hangat dan profesional, dipadukan dengan fasilitas lengkap untuk memastikan setiap tamu merasa diprioritaskan.
+        </p>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-3">
+          <article class="value-card">
+            <div class="value-thumb">
+              <span class="value-badge"><i class="bi bi-people"></i> Service</span>
+              <img loading="lazy" src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1400&auto=format&fit=crop" alt="Professional staff">
+            </div>
+            <div class="p-3">
+              <h5 class="fw-bold mb-1" data-i18n="val_1t">Multi-Language Proficient Staff</h5>
+              <p class="text-muted mb-0" data-i18n="val_1d">Tim kami siap membantu dengan komunikasi yang jelas, ramah, dan solutif.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <article class="value-card">
+            <div class="value-thumb">
+              <span class="value-badge"><i class="bi bi-briefcase"></i> Business</span>
+              <img loading="lazy" src="img/meeting.jpg" alt="Business lounge">
+            </div>
+            <div class="p-3">
+              <h5 class="fw-bold mb-1" data-i18n="val_2t">Supports Business Productivity</h5>
+              <p class="text-muted mb-0" data-i18n="val_2d">Akses cepat, fasilitas meeting, dan kenyamanan untuk ritme kerja Anda.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <article class="value-card">
+            <div class="value-thumb">
+              <span class="value-badge"><i class="bi bi-grid-1x2"></i> Comfort</span>
+              <img loading="lazy" src="https://images.unsplash.com/photo-1541971875076-8f970d573be6?q=80&w=1400&auto=format&fit=crop" alt="Lobby comfort">
+            </div>
+            <div class="p-3">
+              <h5 class="fw-bold mb-1" data-i18n="val_3t">Diverse Facilities</h5>
+              <p class="text-muted mb-0" data-i18n="val_3d">Gym, pool, spa (opsional), lounge—untuk relaksasi yang seimbang.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <article class="value-card">
+            <div class="value-thumb">
+              <span class="value-badge"><i class="bi bi-sliders2"></i> Flexible</span>
+              <img loading="lazy" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=1400&auto=format&fit=crop" alt="Flexible stay">
+            </div>
+            <div class="p-3">
+              <h5 class="fw-bold mb-1" data-i18n="val_4t">Flexible & Easy Arrangement</h5>
+              <p class="text-muted mb-0" data-i18n="val_4d">Corporate rate, group booking, hingga request khusus—lebih mudah.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="signatures" class="section pt-0">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-title" data-i18n="sig_title">Our Signatures</h2>
+        <p class="section-lead mx-auto" data-i18n="sig_lead">
+          Pengalaman yang kami kurasi: nyaman, hangat, dan berkelas—dengan detail yang terasa.
+        </p>
+      </div>
+
+      <div class="signature-grid">
+        <div class="sig">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop" alt="Comfortable service">
+          <div class="sig-cap">
+            <div class="t" data-i18n="sig_1t">Warm & Comfortable Service</div>
+            <div class="s" data-i18n="sig_1d">Hospitality yang rapi, cepat, dan personal—tanpa berlebihan.</div>
+          </div>
+        </div>
+        <div class="sig">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1600&auto=format&fit=crop" alt="Resort leisure">
+          <div class="sig-cap">
+            <div class="t" data-i18n="sig_2t">Resort-Style Leisure</div>
+            <div class="s" data-i18n="sig_2d">Pool & lounge untuk recharge setelah aktivitas bisnis.</div>
+          </div>
+        </div>
+        <div class="sig">
+          <img loading="lazy" src="img/meeting.jpg" alt="Dining experience">
+          <div class="sig-cap">
+            <div class="t" data-i18n="sig_3t">Curated Dining</div>
+            <div class="s" data-i18n="sig_3d">Breakfast yang nyaman dan pilihan menu dengan rasa yang clean.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="location" class="section">
+    <div class="container">
+      <div class="row align-items-end g-3 mb-3">
+        <div class="col-lg-6">
+          <h2 class="section-title" data-i18n="loc_title">Location Info</h2>
+          <p class="section-lead mb-0" data-i18n="loc_lead">
+            Strategis di Karawang, akses mudah untuk industri, rekreasi, restoran, dan pusat belanja.
+          </p>
+        </div>
+        <div class="col-lg-6 text-lg-end">
+          <a class="btn btn-gold" href="index.html#booking">
+            <span data-i18n="loc_cta">Make Reservation</span> <i class="bi bi-arrow-right-short"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="loc-panel">
+        <div class="row g-0">
+          <div class="col-lg-5 loc-map">
+            <iframe loading="lazy" title="Star KIIC Location Map" referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=KIIC%20Karawang&output=embed"></iframe>
+          </div>
+
+          <div class="col-lg-7 p-3 p-lg-4">
+            <div class="row g-3">
+              <div class="col-lg-5">
+                <h5 class="fw-bold mb-2" data-i18n="near_title">Nearby Places</h5>
+                <p class="text-muted mb-0" data-i18n="near_lead">Estimasi jarak (contoh) — sesuaikan data Anda.</p>
+
+                <div class="divider"></div>
+
+                <div class="d-grid gap-2">
+                  <div class="near-item">
+                    <div class="near-left">
+                      <div class="near-ico"><i class="bi bi-geo-alt"></i></div>
+                      <div>
+                        <div class="fw-bold small">KIIC</div>
+                        <div class="text-muted small">Industrial Area</div>
+                      </div>
+                    </div>
+                    <span class="near-badge">2.2 km</span>
+                  </div>
+
+                  <div class="near-item">
+                    <div class="near-left">
+                      <div class="near-ico"><i class="bi bi-cart"></i></div>
+                      <div>
+                        <div class="fw-bold small">Resinda Park Mall</div>
+                        <div class="text-muted small">Shopping</div>
+                      </div>
+                    </div>
+                    <span class="near-badge">7.6 km</span>
+                  </div>
+
+                  <div class="near-item">
+                    <div class="near-left">
+                      <div class="near-ico"><i class="bi bi-flag"></i></div>
+                      <div>
+                        <div class="fw-bold small">Karawang Central</div>
+                        <div class="text-muted small">City Center</div>
+                      </div>
+                    </div>
+                    <span class="near-badge">7.8 km</span>
+                  </div>
+
+                  <div class="near-item">
+                    <div class="near-left">
+                      <div class="near-ico"><i class="bi bi-tree"></i></div>
+                      <div>
+                        <div class="fw-bold small">Golf & Green Area</div>
+                        <div class="text-muted small">Leisure</div>
+                      </div>
+                    </div>
+                    <span class="near-badge">5.3 km</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-7">
+                <div class="p-3 p-lg-4 rounded-xxl border-soft shadow-soft" style="background:color-mix(in srgb, var(--surface) 96%, transparent);">
+                  <div class="d-flex gap-3 align-items-start">
+                    <div class="icon-disc"><i class="bi bi-compass"></i></div>
+                    <div>
+                      <h6 class="fw-bold mb-1" data-i18n="loc_box_t">Strategic for Work, Calm for Rest</h6>
+                      <p class="text-muted mb-3" data-i18n="loc_box_d">
+                        Jarak dekat ke area industri, namun tetap menghadirkan suasana tenang untuk quality rest setelah aktivitas.
+                      </p>
+                      <div class="d-flex flex-wrap gap-2">
+                        <a class="btn btn-outline-secondary border-soft rounded-xl" style="color:var(--text); background:transparent;"
+                           href="https://wa.me/6281200000000?text=Halo%20Star%20KIIC%2C%20saya%20ingin%20tanya%20lokasi%20dan%20akses." target="_blank" rel="noopener">
+                          <i class="bi bi-whatsapp"></i> <span data-i18n="loc_wa">Chat WhatsApp</span>
+                        </a>
+                        <a class="btn btn-outline-secondary border-soft rounded-xl" style="color:var(--text); background:transparent;"
+                           href="tel:+6281200000000">
+                          <i class="bi bi-telephone"></i> <span data-i18n="loc_call">Call</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="cta-ivory mt-3 p-3 p-lg-4">
+                  <div class="row align-items-center g-3 position-relative">
+                    <div class="col-md-8">
+                      <h5 class="fw-bold mb-1" data-i18n="cta_title">Customize Your Booking</h5>
+                      <p class="text-muted mb-0" data-i18n="cta_sub">Butuh corporate rate, group booking, atau request khusus? Kami siap bantu.</p>
+                    </div>
+                    <div class="col-md-4 text-md-end">
+                      <a class="btn btn-gold" href="https://wa.me/6281200000000?text=Halo%20Star%20KIIC%2C%20saya%20ingin%20custom%20booking." target="_blank" rel="noopener">
+                        <i class="bi bi-whatsapp"></i> <span data-i18n="cta_btn">Contact</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="section pt-0">
+    <div class="container">
+      <div class="row align-items-center g-3 mb-3">
+        <div class="col-lg-8">
+          <h2 class="section-title" data-i18n="rev_title">Guest Review</h2>
+          <p class="section-lead mb-0" data-i18n="rev_lead">Ulasan dari tamu dari berbagai negara — ringkas, jujur, dan relevan.</p>
+        </div>
+        <div class="col-lg-4">
+          <div class="d-flex justify-content-lg-end justify-content-between align-items-center gap-2 flex-wrap">
+            <span class="badge border-soft px-3 py-2 rounded-xl" style="background:color-mix(in srgb, var(--surface) 94%, transparent);">
+              <span class="stars">★★★★★</span>
+              <span class="ms-2 fw-bold">4.8/5</span>
+              <span class="text-muted ms-1" data-i18n="rev_count">from 1,200+ reviews</span>
+            </span>
+
+            <div class="review-controls">
+              <button class="carousel-btn" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev" aria-label="Previous">
+                <i class="bi bi-chevron-left"></i>
+              </button>
+              <button class="carousel-btn" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next" aria-label="Next">
+                <i class="bi bi-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="reviewCarousel" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="row g-3">
+              <div class="col-12 col-lg-4">
+                <div class="review-card">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <div class="d-flex gap-3 align-items-center">
+                      <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop" alt="Nadia">
+                      <div>
+                        <div class="fw-bold">Nadia</div>
+                        <div class="text-muted small">Jakarta, Indonesia</div>
+                      </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted">
+                    Pelayanannya rapi, cepat, dan kamar terasa sangat premium. Cocok untuk business trip.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-4">
+                <div class="review-card">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <div class="d-flex gap-3 align-items-center">
+                      <img class="avatar" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=200&auto=format&fit=crop" alt="Emily">
+                      <div>
+                        <div class="fw-bold">Emily</div>
+                        <div class="text-muted small">London, United Kingdom</div>
+                      </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted">
+                    Elegant atmosphere and very professional staff. The room was spotless and the stay felt truly luxurious.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-4">
+                <div class="review-card">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <div class="d-flex gap-3 align-items-center">
+                      <img class="avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop" alt="Kenji">
+                      <div>
+                        <div class="fw-bold">Kenji</div>
+                        <div class="text-muted small">Tokyo, Japan</div>
+                      </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted">
+                    Great breakfast and calm surroundings. Perfect place to rest after meetings in the industrial area.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row g-3">
+              <div class="col-12 col-lg-4">
+                <div class="review-card">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <div class="d-flex gap-3 align-items-center">
+                      <img class="avatar" src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=200&auto=format&fit=crop" alt="Arif">
+                      <div>
+                        <div class="fw-bold">Arif</div>
+                        <div class="text-muted small">Surabaya, Indonesia</div>
+                      </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted">
+                    Ambience mewah tapi simpel. Lobby nyaman, staff helpful, dan aksesnya gampang.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-4">
+                <div class="review-card">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <div class="d-flex gap-3 align-items-center">
+                      <img class="avatar" src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?q=80&w=200&auto=format&fit=crop" alt="Oliver">
+                      <div>
+                        <div class="fw-bold">Oliver</div>
+                        <div class="text-muted small">Sydney, Australia</div>
+                      </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted">
+                    Fast Wi-Fi, comfortable bed, and great service. Ideal for mixing work and leisure in one stay.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-4">
+                <div class="review-card">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <div class="d-flex gap-3 align-items-center">
+                      <img class="avatar" src="https://images.unsplash.com/photo-1548142813-c348350df52b?q=80&w=200&auto=format&fit=crop" alt="Sofia">
+                      <div>
+                        <div class="fw-bold">Sofia</div>
+                        <div class="text-muted small">Barcelona, Spain</div>
+                      </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted">
+                    Beautiful design and a premium feel. Everything was clean, calm, and thoughtfully arranged.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div></div></div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-12 col-lg-4">
+          <p class="text-muted mb-3" data-i18n="foot_desc">
+            Elegan, profesional, dan nyaman — untuk bisnis maupun liburan.
+          </p>
+          <div class="d-flex gap-2 flex-wrap">
+            <a class="btn btn-sm btn-gold" href="index.html#booking"><span data-i18n="foot_book">Book Now</span></a>
+            <a class="btn btn-sm btn-outline-secondary border-soft rounded-xl" style="color:var(--text); background:transparent;"
+               href="https://wa.me/6281200000000" target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp"></i> <span data-i18n="foot_chat">Chat</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-2 footer-mini">
+          <div class="fw-bold mb-2" data-i18n="foot_menu">Menu</div>
+          <div class="d-grid gap-2">
+            <a href="index.html#about" data-i18n="nav_about">Tentang</a>
+            <a href="index.html#offers" data-i18n="nav_offers">Penawaran</a>
+            <a href="index.html#rooms" data-i18n="nav_rooms">Kamar</a>
+            <a href="index.html#facilities" data-i18n="nav_facilities">Fasilitas</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-3 footer-mini">
+          <div class="fw-bold mb-2" data-i18n="foot_contact">Contact</div>
+          <div class="d-grid gap-2">
+            <a href="tel:+6281200000000"><i class="bi bi-telephone"></i> +62 812 0000 0000</a>
+            <a href="https://wa.me/6281200000000" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+            <a href="index.html#location"><i class="bi bi-geo-alt"></i> KIIC, Karawang</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-3 footer-mini">
+          <div class="fw-bold mb-2" data-i18n="foot_follow">Follow</div>
+          <div class="d-flex gap-2 flex-wrap">
+            <a class="btn btn-sm border-soft rounded-xl" style="background:transparent;" href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a class="btn btn-sm border-soft rounded-xl" style="background:transparent;" href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a class="btn btn-sm border-soft rounded-xl" style="background:transparent;" href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider my-4"></div>
+
+      <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center">
+        <small class="text-muted">© <span id="year"></span> Star KIIC. All rights reserved.</small>
+        <small class="text-muted"><span data-i18n="foot_note">Built with Bootstrap • Optimized for SEO & performance</span></small>
+      </div>
+    </div>
+  </footer>
+
+  <div class="float-stack" aria-label="Floating actions">
+    <button class="float-btn top is-hidden" id="btnTop" type="button" aria-label="Back to top">
+      <i class="bi bi-arrow-up fs-5"></i>
+    </button>
+    <a class="float-btn wa" href="https://wa.me/6281200000000?text=Halo%20Star%20KIIC%2C%20saya%20ingin%20tanya%20ketersediaan%20kamar." target="_blank" rel="noopener" aria-label="WhatsApp">
+      <i class="bi bi-whatsapp fs-4"></i>
+    </a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // BACK TO TOP + show/hide (SAMA)
+    const btnTop = document.getElementById('btnTop');
+    btnTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+    const TOP_THRESHOLD = 220;
+    function toggleTopBtn(){
+      const y = window.scrollY || document.documentElement.scrollTop;
+      if(y > TOP_THRESHOLD) btnTop.classList.remove('is-hidden');
+      else btnTop.classList.add('is-hidden');
+    }
+    window.addEventListener('scroll', toggleTopBtn, { passive: true });
+    toggleTopBtn();
+
+    // THEME (SAMA)
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    
+    function applyTheme(theme){
+      root.setAttribute('data-theme', theme);
+      themeToggle.checked = (theme === 'dark');
+      localStorage.setItem('theme', theme);
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if(savedTheme){
+      applyTheme(savedTheme);
+    } else {
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      applyTheme(prefersDark ? 'dark' : 'light');
+    }
+
+    themeToggle.addEventListener('change', () => {
+      applyTheme(themeToggle.checked ? 'dark' : 'light');
+    });
+
+    // i18n (SAMA: ID/EN)
+    const i18n = {
+      id: {
+        nav_about: "Tentang",
+        nav_offers: "Penawaran",
+        nav_rooms: "Kamar",
+        nav_facilities: "Fasilitas",
+        nav_location: "Lokasi",
+        nav_reviews: "Ulasan",
+        nav_book: "Book Now",
+
+        about_page: "Tentang Kami",
+
+        hero_kicker: "Kisah & Layanan Signature",
+        hero_title: "Luxury yang Dipikirkan<br/>untuk Bisnis & Liburan",
+        hero_sub: "Di Star KIIC, kami memadukan ketenangan, pelayanan profesional, dan detail elegan untuk menciptakan pengalaman menginap yang berkelas — dari lobby hingga kamar.",
+        hero_cta1: "Explore Values",
+        hero_cta2: "See Signatures",
+        hero_m1: "Trusted",
+        hero_m1s: "Professional standards",
+        hero_m2: "Calm",
+        hero_m2s: "Green-view ambience",
+        hero_m3: "Premium",
+        hero_m3s: "Attention to details",
+        mini1: "Signature Exterior",
+        mini2: "Luxury Lobby",
+        mini3: "Resort Pool & Lounge",
+
+        intro_title: "About Star KIIC",
+        intro_lead: "Kami menghadirkan hospitality yang hangat, rapi, dan profesional — dengan fasilitas lengkap untuk memenuhi kebutuhan tamu selama menginap.",
+        intro_p1: "Fast, precise service",
+        intro_p1s: "Check-in smooth & efficient",
+        intro_p2: "Reliable connectivity",
+        intro_p2s: "Wi-Fi for work & entertainment",
+        intro_p3: "Curated dining",
+        intro_p3s: "Breakfast & comfort menu",
+
+        val_title: "Our Value & Services",
+        val_lead: "Layanan yang hangat dan profesional, dipadukan dengan fasilitas lengkap untuk memastikan setiap tamu merasa diprioritaskan.",
+        val_1t: "Multi-Language Proficient Staff",
+        val_1d: "Tim kami siap membantu dengan komunikasi yang jelas, ramah, dan solutif.",
+        val_2t: "Supports Business Productivity",
+        val_2d: "Akses cepat, fasilitas meeting, dan kenyamanan untuk ritme kerja Anda.",
+        val_3t: "Diverse Facilities",
+        val_3d: "Gym, pool, spa (opsional), lounge—untuk relaksasi yang seimbang.",
+        val_4t: "Flexible & Easy Arrangement",
+        val_4d: "Corporate rate, group booking, hingga request khusus—lebih mudah.",
+
+        sig_title: "Our Signatures",
+        sig_lead: "Pengalaman yang kami kurasi: nyaman, hangat, dan berkelas—dengan detail yang terasa.",
+        sig_1t: "Warm & Comfortable Service",
+        sig_1d: "Hospitality yang rapi, cepat, dan personal—tanpa berlebihan.",
+        sig_2t: "Resort-Style Leisure",
+        sig_2d: "Pool & lounge untuk recharge setelah aktivitas bisnis.",
+        sig_3t: "Curated Dining",
+        sig_3d: "Breakfast yang nyaman dan pilihan menu dengan rasa yang clean.",
+
+        loc_title: "Location Info",
+        loc_lead: "Strategis di Karawang, akses mudah untuk industri, rekreasi, restoran, dan pusat belanja.",
+        loc_cta: "Make Reservation",
+        near_title: "Nearby Places",
+        near_lead: "Estimasi jarak (contoh) — sesuaikan data Anda.",
+        loc_box_t: "Strategic for Work, Calm for Rest",
+        loc_box_d: "Jarak dekat ke area industri, namun tetap menghadirkan suasana tenang untuk quality rest setelah aktivitas.",
+        loc_wa: "Chat WhatsApp",
+        loc_call: "Call",
+
+        cta_title: "Customize Your Booking",
+        cta_sub: "Butuh corporate rate, group booking, atau request khusus? Kami siap bantu.",
+        cta_btn: "Contact",
+
+        rev_title: "Guest Review",
+        rev_lead: "Ulasan dari tamu dari berbagai negara — ringkas, jujur, dan relevan.",
+        rev_count: "from 1,200+ reviews",
+
+        foot_desc: "Elegan, profesional, dan nyaman — untuk bisnis maupun liburan.",
+        foot_book: "Book Now",
+        foot_chat: "Chat",
+        foot_menu: "Menu",
+        foot_contact: "Contact",
+        foot_follow: "Follow",
+        foot_note: "Built with Bootstrap • Optimized for SEO & performance"
+      },
+      en: {
+        nav_about: "About",
+        nav_offers: "Offers",
+        nav_rooms: "Rooms",
+        nav_facilities: "Facilities",
+        nav_location: "Location",
+        nav_reviews: "Reviews",
+        nav_book: "Book Now",
+
+        about_page: "About Us",
+
+        hero_kicker: "Our Story & Signature Service",
+        hero_title: "Crafted Luxury<br/>for Business & Leisure",
+        hero_sub: "At Star KIIC, we blend calm surroundings, professional hospitality, and elegant details to create a refined stay—from lobby to room.",
+        hero_cta1: "Explore Values",
+        hero_cta2: "See Signatures",
+        hero_m1: "Trusted",
+        hero_m1s: "Professional standards",
+        hero_m2: "Calm",
+        hero_m2s: "Green-view ambience",
+        hero_m3: "Premium",
+        hero_m3s: "Attention to details",
+        mini1: "Signature Exterior",
+        mini2: "Luxury Lobby",
+        mini3: "Resort Pool & Lounge",
+
+        intro_title: "About Star KIIC",
+        intro_lead: "We deliver warm, structured, and professional hospitality—with complete facilities to meet your needs during the stay.",
+        intro_p1: "Fast, precise service",
+        intro_p1s: "Smooth & efficient check-in",
+        intro_p2: "Reliable connectivity",
+        intro_p2s: "Wi-Fi for work & entertainment",
+        intro_p3: "Curated dining",
+        intro_p3s: "Breakfast & comfort menu",
+
+        val_title: "Our Value & Services",
+        val_lead: "Warm, professional service combined with complete facilities—so every guest feels prioritized.",
+        val_1t: "Multi-Language Proficient Staff",
+        val_1d: "Clear communication, friendly approach, and solution-driven assistance.",
+        val_2t: "Supports Business Productivity",
+        val_2d: "Quick access, meeting facilities, and comfort to match your work rhythm.",
+        val_3t: "Diverse Facilities",
+        val_3d: "Gym, pool, lounge—balanced relaxation during your stay.",
+        val_4t: "Flexible & Easy Arrangement",
+        val_4d: "Corporate rates, group bookings, and special requests—made easier.",
+
+        sig_title: "Our Signatures",
+        sig_lead: "Signature experiences we curate: comfortable, warm, and premium—with details you can feel.",
+        sig_1t: "Warm & Comfortable Service",
+        sig_1d: "Structured, fast, and personal hospitality—never excessive.",
+        sig_2t: "Resort-Style Leisure",
+        sig_2d: "Pool & lounge to recharge after business activities.",
+        sig_3t: "Curated Dining",
+        sig_3d: "Comfortable breakfast and clean-tasting menu options.",
+
+        loc_title: "Location Info",
+        loc_lead: "Strategic in Karawang—easy access to industry, leisure, restaurants, and shopping.",
+        loc_cta: "Make Reservation",
+        near_title: "Nearby Places",
+        near_lead: "Distance estimates (sample) — adjust with your data.",
+        loc_box_t: "Strategic for Work, Calm for Rest",
+        loc_box_d: "Close to the industrial area while still providing a calm setting for quality rest after activities.",
+        loc_wa: "WhatsApp",
+        loc_call: "Call",
+
+        cta_title: "Customize Your Booking",
+        cta_sub: "Need corporate rates, group booking, or special requests? We’re ready to help.",
+        cta_btn: "Contact",
+
+        rev_title: "Guest Review",
+        rev_lead: "Feedback from guests across countries—concise, honest, and relevant.",
+        rev_count: "from 1,200+ reviews",
+
+        foot_desc: "Elegant, professional, and comfortable—for business and leisure.",
+        foot_book: "Book Now",
+        foot_chat: "Chat",
+        foot_menu: "Menu",
+        foot_contact: "Contact",
+        foot_follow: "Follow",
+        foot_note: "Built with Bootstrap • Optimized for SEO & performance"
+      }
+    };
+
+    let currentLang = localStorage.getItem('lang') || 'id';
+    function applyLang(lang){
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      localStorage.setItem('lang', lang);
+      document.getElementById('langSelect').value = lang;
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const val = i18n?.[lang]?.[key];
+        if(!val) return;
+        el.innerHTML = val;
+      });
+    }
+    document.getElementById('langSelect').addEventListener('change', (e) => applyLang(e.target.value));
+    applyLang(currentLang);
+
+    // smooth scroll within page (untuk anchor about page)
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        const href = a.getAttribute('href');
+        if(!href || href === '#') return;
+        const target = document.querySelector(href);
+        if(!target) return;
+        e.preventDefault();
+        const top = target.getBoundingClientRect().top + window.pageYOffset - 78;
+        window.scrollTo({ top, behavior:'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
