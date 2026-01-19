@@ -711,13 +711,13 @@
                     </select>
                   </div>
                   <div class="col-6">
-                    <label class="form-label fw-semibold small" data-i18n="book_checkin">Check In</label>
-                    <input class="form-control" type="date" id="heroCheckIn" required>
-                  </div>
-                  <div class="col-6">
-                    <label class="form-label fw-semibold small" data-i18n="book_checkout">Check Out</label>
-                    <input class="form-control" type="date" id="heroCheckOut" required>
-                  </div>
+  <label class="form-label fw-semibold small" data-i18n="book_checkin">Check In</label>
+  <input class="form-control" type="date" id="heroCheckIn" required>
+</div>
+<div class="col-6">
+  <label class="form-label fw-semibold small" data-i18n="book_checkout">Check Out</label>
+  <input class="form-control" type="date" id="heroCheckOut" required>
+</div>
                   <div class="col-6">
                     <label class="form-label fw-semibold small" data-i18n="book_guests">Guests</label>
                     <select class="form-select" id="heroGuests" required>
@@ -1693,16 +1693,61 @@
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // 3. FUNGSI BOOKING HERO KE WA
-    function handleHeroBooking(e){
-      e.preventDefault();
-      
-      const location = document.getElementById('heroLoc').value;
-      const checkin = document.getElementById('heroCheckIn').value;
-      const checkout = document.getElementById('heroCheckOut').value;
-      const guests = document.getElementById('heroGuests').value;
-      const rooms = document.getElementById('heroRooms').value;
+// Fungsi untuk mengatur batasan tanggal (min date) dan nilai default
+function setupBookingDates() {
+    const today = new Date();
+    
+    // Format tanggal ke YYYY-MM-DD sesuai standar input type="date"
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+    const minDate = `${year}-${month}-${day}`;
 
-      const text = `Halo Star KIIC, saya ingin cek ketersediaan:
+    const checkInInput = document.getElementById('heroCheckIn');
+    const checkOutInput = document.getElementById('heroCheckOut');
+
+    // 1. Set atribut 'min' agar tanggal kemarin tidak bisa diklik
+    checkInInput.min = minDate;
+    checkOutInput.min = minDate;
+
+    // 2. Set nilai default ke tanggal hari ini jika input masih kosong
+    if (!checkInInput.value) checkInInput.value = minDate;
+    
+    // Set checkout otomatis ke besok harinya sebagai default yang logis
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const tomorrowDate = tomorrow.toISOString().split('T')[0];
+    if (!checkOutInput.value) checkOutInput.value = tomorrowDate;
+
+    // 3. Logika agar Check-out tidak bisa sebelum Check-in
+    checkInInput.addEventListener('change', function() {
+        checkOutInput.min = this.value;
+        if (checkOutInput.value < this.value) {
+            checkOutInput.value = this.value;
+        }
+    });
+}
+
+// Jalankan fungsi saat halaman selesai dimuat
+document.addEventListener('DOMContentLoaded', setupBookingDates);
+
+// FUNGSI BOOKING HERO KE WA (Sudah ada di kode Anda)
+function handleHeroBooking(e){
+    e.preventDefault();
+    
+    const location = document.getElementById('heroLoc').value;
+    const checkin = document.getElementById('heroCheckIn').value;
+    const checkout = document.getElementById('heroCheckOut').value;
+    const guests = document.getElementById('heroGuests').value;
+    const rooms = document.getElementById('heroRooms').value;
+
+    // Validasi tambahan sebelum kirim WA
+    if(new Date(checkout) <= new Date(checkin)) {
+        alert("Tanggal Check-out harus setelah tanggal Check-in");
+        return false;
+    }
+
+    const text = `Halo Star KIIC, saya ingin cek ketersediaan:
 - Lokasi: ${location}
 - Check-in: ${checkin}
 - Check-out: ${checkout}
@@ -1711,10 +1756,10 @@
 
 Mohon info ketersediaan.`;
 
-      const url = `https://wa.me/6281200000000?text=${encodeURIComponent(text)}`;
-      window.open(url, '_blank');
-      return false;
-    }
+    const url = `https://wa.me/6281200000000?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank');
+    return false;
+}
 
     // 6 & 7. MODAL LOGIC
     function openBookingModal(itemName){
